@@ -26,6 +26,10 @@ void FTPServer::addFilesystem(String Name, FS *const Filesystem) {
   _Filesystem.addFilesystem(Name, Filesystem);
 }
 
+void FTPServer::remFilesystem(String Name) {
+  _Filesystem.remFilesystem(Name);
+}
+
 bool FTPServer::begin() {
   _Server.begin();
   return true;

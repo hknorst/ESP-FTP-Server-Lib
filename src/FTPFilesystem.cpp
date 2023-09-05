@@ -15,6 +15,11 @@ void FTPFilesystem::addFilesystem(String Name, FS *const Filesystem) {
   _Filesystems[Name] = Filesystem;
 }
 
+void FTPFilesystem::remFilesystem(String Name) {
+  std::map<const String, fs::FS *>::iterator it = _Filesystems.find(Name);
+  _Filesystems.erase(it); // erasing by iterator
+}
+
 void FTPFilesystem::clearFilesystemList() {
   _Filesystems.clear();
 }

@@ -17,6 +17,7 @@ public:
   virtual ~FTPFilesystem();
 
   void addFilesystem(String Name, FS *const Filesystem);
+  void remFilesystem(String Name);
   void clearFilesystemList();
 
   File open(const String &path, const char *mode = FILE_READ);

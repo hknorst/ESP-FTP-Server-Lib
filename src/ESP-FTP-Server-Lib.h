@@ -17,6 +17,7 @@ public:
   void addUser(const FTPUser &User);
 
   void addFilesystem(String Name, FS *const Filesystem);
+  void remFilesystem(String Name);
 
   bool begin();
   void handle();
